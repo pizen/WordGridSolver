@@ -3,6 +3,7 @@
 import sys
 import getopt
 import itertools
+import random
 
 words = []
 
@@ -40,6 +41,8 @@ def find_solution(grid):
                     # in the grid
                     possible.append(word)
                     break
+
+    random.shuffle(possible)
 
     # Loop through the possible solutions looking for an answer
     # This is brute force and could probably be made more efficient
